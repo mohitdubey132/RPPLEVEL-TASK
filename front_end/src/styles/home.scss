@@ -87,18 +87,23 @@
 
       &::after {
         content: "";
+        top:15%;
         width: 30vmax;
         height: 30vmax;
-        background-color: $color3;
+        //background-color: $color3;
+        background-color: rgb(26, 26, 27);
+        opacity: 0.30;
         position: absolute;
         z-index: -1;
         border-radius: 50%;
+        
       }
 
       >img {
         width: 40vmax;
         object-fit: contain;
         height: 240vmax;
+       //
 
       }
     }

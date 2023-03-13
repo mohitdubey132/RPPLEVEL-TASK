@@ -16,13 +16,13 @@
             "Ending_year": "2021",
             "class": "Model Science College JABALPUR",
             "location": "jabalpur",
-            "course": "BCA"
+            "course": "BCA from"
         },
         {
             "Ending_year": "2023",
-            "class": "JABALPUR ENGINEERING COLLEGE (JEC",
+            "class": "JABALPUR ENGINEERING COLLEGE (JEC)",
             "location": "jabalpur",
-            "course": "MCA"
+            "course": "MCA from "
         }
     ]
 }

@@ -74,7 +74,7 @@ const Home = () => {
 
       </section>
       <section className='imgHome'>
-       {   //   <img src={me} alt="MOhit DUBEY" /> 
+       {     <img src={me} alt="MOhit DUBEY" /> 
        }
  
       </section>
