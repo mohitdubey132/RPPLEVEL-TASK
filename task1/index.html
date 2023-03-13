@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Publishers</title>
+    <link rel="stylesheet" href="task1.css">
+    <style>
+        /* Basic Styling */
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #9cc7f5;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            margin-right: 100px;
+            background-color: #130a0f;
+            color: #06020f;
+            color: #fff;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #212121;
+            color: #fff;
+            padding: 10px;
+
+            bottom: 0;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            margin-top: 100px;
+
+        }
+
+        .HomePage {
+            display: flex;
+            padding: 15px;
+        }
+
+        h1 {
+            font: 800;
+            font-size: 3rem;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h2 {
+            font: 700;
+            font-size: 2rem;
+            color: #110707;
+
+        }
+
+        p {
+            font: 400;
+            font-size: 18px;
+            line-height: 1.5;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .service-card {
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: #020107;
+            border-radius: 30px 0px  30px 0px ;
+            border: solid 5px black;
+        }
+
+        .service-card :hover {
+
+            font-size: 600;
+            color: rgb(11, 12, 12);
+            background-color: rgb(247, 207, 243);
+            padding: 0;
+            font-size: 2rem;
+        }
+
+        .service-card h3 {
+            color: #f86363;
+            font-size: 24px;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        section {
+            margin: 50px auto;
+            max-width: 800px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        input,
+        textarea {
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        textarea {
+            height: 200px;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0062cc;
+        }
+        
+       .btn {
+            background-color: #5ef059;
+            color: #130303;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            border: 9px black;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #3141d4;
+        }
+        .nav-links{
+            font: 2rem sans-serif;
+            color: #2ac51c;
+
+        }
+        .contactform{
+            display:flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 80%;
+            background-color: rgb(253, 252, 253);
+            border-left: 2px black;
+            border-right: 2px black;
+            padding: 20px;
+            border-radius: 20px;
+        
+        }
+
+        /* Media Queries */
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Book Publishers</h1>
+        <header>
+            <div class="logo"><img src="logo.png" alt="logo" width="80px">Logo</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="burger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </nav>
+        </header>
+
+    </header>
+    <div class="container" id="Home">
+        <div class="HomePage">
+            <img src="download.jpeg" alt="book">
+            <div>
+                <p>Welcome to Ramo ji Book Publishers, your one-stop shop for all your publishing needs. We specialize
+                    in publishing and
+                    promoting books in a variety of genres, including fiction, non-fiction, and children's books.</p>
+                <p>Our team of experienced editors and designers will work with you every step of the way to ensure that
+                    your
+                    book is of the highest quality and reaches as wide an audience as possible. Whether you are a
+                    first-time
+                    author or an established writer, we can help you bring your book to life.</p>
+
+                <p>Contact us today to learn more about our services and to get started on your publishing journey.</p>
+
+                 <a href="mailto:mohitdubey1322001@gmail.com"><button class="btn">Contact us </button></a>         
+            </div>
+        </div>
+        <hr>
+        <section>
+            <h2 id="services">Our Services</h2>
+            <div class="services-container">
+                <div class="service-card">
+                    <div>
+                        <h3>Editing</h3>
+                        <p>We offer professional editing services to help ensure that your book is free of errors and
+                            ready
+                            for publication.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div>
+                        <h3>Design</h3>
+                        <p>Our talented designers can create beautiful and eye-catching covers and interior layouts for
+                            your
+                            book.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div>
+                        <h3>Publishing</h3>
+                        <p>We can handle all aspects of the publishing process, including formatting, printing, and
+                            distribution.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div>
+                        <h3>Marketing</h3>
+                        <p>We offer a range of marketing services to help you promote your book, including social media
+                            marketing, email marketing, and book tours.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div>
+                        <h3>Consulting</h3>
+                        <p>Our team of experts can provide guidance and advice on all aspects of the publishing process,
+                            from writing and editing to marketing and distribution.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                <div>
+                <h3>E-book Conversion</h3>
+                <p>We can convert your manuscript into an e-book format compatible with all major e-readers and
+                    devices.</p>
+            </div>
+    </div>
+    </div>
+    </section>
+    <hr>
+    <section id="contact">
+        <div class="contactform">        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form> </div> 
+    </section>
+    <hr>
+    </div>
+
+    <footer>
+        <p>Book Publishers &copy; 2023 All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
