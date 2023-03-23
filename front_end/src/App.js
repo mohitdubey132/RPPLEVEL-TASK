@@ -1,16 +1,25 @@
-import Header from "./components/Header";
-import Home from "./components/Home.js";
-import Work from "./components/Work.js";
-import TimeLine from "./components/TimeLine";
-import Contactus from "./components/Contactus";
+import Reume from './components/Reume'
+import { Route, Routes, Link } from 'react-router-dom';
+import SignIn from './components/SignIn';
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (<>
-  <Header/>
-  <Home/>
-  <Work/>
-  <TimeLine/>
-  <Contactus/>
-  
+    <div id='AppHome'>
+      <nav>
+        <ul>
+          <li><Link to="/">Login</Link></li>
+          <li><Link to ="/register">Register </Link></li>
+          <li><Link to="/books">Resume</Link></li>
+          
+        
+        </ul>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<SignIn />} />
+        <Route path="/books" element={<Reume />} />
+      </Routes>
+    </div>
   </>
   );
 }

@@ -12,9 +12,8 @@ const Contactus = () => {
                 <input type='text' placeholder='Your Name' required/>
                 <input type='email' placeholder='Your Email' required/>
                 <input type='text' placeholder='Your Message' required/>
-                <button type='submit'> Send</button>
-
-            </form>
+                <button type='submit'  > Send</button>
+                           </form>
 
         </section>
         <aside>
@@ -24,4 +23,4 @@ const Contactus = () => {
   )
 }
 
-export default Contactus
+export default Contactus;

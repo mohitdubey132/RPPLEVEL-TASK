@@ -1,11 +1,14 @@
 import React from 'react'
-
+import toast, { Toaster } from "react-hot-toast";
+import { Link  } from "react-router-dom";
+const sucessNotify = () => toast.success("send email!");
 const Header = () => {
   return (
     <>
       <nav>
         <NavContent />
-
+        <Toaster />
+        <button onClick={sucessNotify}>Email</button>
       </nav>
     </>
   )
@@ -26,9 +29,11 @@ const NavContent = ({ setMenuOpen }) => (
       <a onClick={() => setMenuOpen(false)} href="#contact">
         Contact
       </a>
+      <Link to="/">Login</Link>
     </div>
-    <a href="mailto:mohitdubey1322001@gmail.com">
-      <button>Email</button>
+    
+    <a href="mailto:mohitdubey1322001@gmail.com" onFocus={sucessNotify}>
+      <button onClick={sucessNotify}>Email</button>
     </a>
   </>
 );
