@@ -69,3 +69,17 @@ nav{
     cursor: not-allowed;
 
 }
+@media only screen and (max-width: 600px) {
+    nav {
+        align-items:start;
+        width: 80%;
+      > ul {
+        margin: 2rem;
+        padding: 2px;
+        
+        > li {
+         
+        }
+      }
+    }
+  }

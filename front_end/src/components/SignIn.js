@@ -1,11 +1,18 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-
+import { useEffect,useRef,useState } from 'react';
 
 
 const SignIn = () => {
-  return (<>
+const [info,setinfo] =useState({email:"",pass:""});
+const emailRef =useRef(null);
+const passwordRef = useRef('');
+
+//console.log(info)
+setinfo({email:"mohit",pass:"1234"})
+console.log('info')
+return (<>
     <div id='signin'><h1>Sing In</h1></div>
     <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -27,7 +34,7 @@ const SignIn = () => {
         Submit
       </Button>
     </Form>
-
+    
    </>
   )
 }
