@@ -1,0 +1,26 @@
+user APIs 
+-----------------------------
+api-> http://localhost:4000/api/v1/register 
+      method-> post 
+
+        success {
+                    "success": true,
+                    "user": {
+                        "Name": "mohit dubey",
+                        "email": "mohitdubey@gmail.com",
+                        "password": "$2b$10$gllDwEdszjawnTU7z0ku5e5WHDUQDpNVB8SerT922TPyZgVf1I4Jq",
+                        "_id": "641c8906923c72a730ce6bac",
+                        "__v": 0
+                    },
+                    "message": "user created"
+                }
+        error {
+            "success": false,
+            "message": "E11000 duplicate key error collection: login.users index: email_1 dup key: { email: \"mohitdubey@gmail.com\" }",
+            "error": "MongoServerError: E11000 duplicate key error collection: login.users index: email_1 dup key: { email: \"mohitdubey@gmail.com\" }\n    at D:\\karan\\node_modules\\mongodb\\lib\\operations\\insert.js:50:33\n    at D:\\karan\\node_modules\\mongodb\\lib\\cmap\\connection_pool.js:327:25\n    at D:\\karan\\node_modules\\mongodb\\lib\\sdam\\server.js:207:17\n    at handleOperationResult (D:\\karan\\node_modules\\mongodb\\lib\\sdam\\server.js:323:20)\n    at Connection.onMessage (D:\\karan\\node_modules\\mongodb\\lib\\cmap\\connection.js:213:9)\n    at MessageStream.<anonymous> (D:\\karan\\node_modules\\mongodb\\lib\\cmap\\connection.js:59:60)\n    at MessageStream.emit (node:events:512:28)\n    at processIncomingData (D:\\karan\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:124:16)\n    at MessageStream._write (D:\\karan\\node_modules\\mongodb\\lib\\cmap\\message_stream.js:33:9)\n    at writeOrBuffer (node:internal/streams/writable:392:12)"
+        }
+        {
+    "success": false,
+    "message": "user validation failed: password: Path `password` is required.",
+    "error": "ValidationError: user validation failed: password: Path `password` is required.\n    at Document.invalidate (D:\\karan\\node_modules\\mongoose\\lib\\document.js:3080:32)\n    at D:\\karan\\node_modules\\mongoose\\lib\\document.js:2873:17\n    at D:\\karan\\node_modules\\mongoose\\lib\\schematype.js:1350:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)"
+}
