@@ -20,7 +20,7 @@ const SignIn = () => {
   function handleSubmit(event) {
     event.preventDefault();
     fetchData();
-   
+
   }
   // useEffect(() => {
   //   // Perform the side effect here
@@ -39,18 +39,23 @@ const SignIn = () => {
       }),
     });
 
-  const data = await response.json()
-  console.log(data);
-  if (data.success === true) {
-    successNotify();
-    localStorage.setItem("userId", data.user._id);
-    localStorage.setItem("userName", data.user.Name)
-    setTimeout(() => { navigate('/books'); }, 4000);
-
-  }
+    const data = await response.json()
+    console.log(data);
+    if (data.success === true) {
+      successNotify();
+      localStorage.setItem("userId", data.user._id);
+      localStorage.setItem("userName", data.user.Name)
+      if (data.user.role === "admain") {
+        setTimeout(() => { navigate('/admin'); }, 4000);
+      }
+      else {
+        setTimeout(() => { navigate('/'); }, 4000);
+      }
+    }
+  
   else {
-    failedLoginNotify();
-  }
+  failedLoginNotify();
+}
     // Fetch data from an API and update the state
   //   fetch('http://localhost:4000/api/v1/loginUser', {
   //     method: 'POST',
@@ -73,40 +78,40 @@ const SignIn = () => {
   //     });
   //
  }
-  return (<>
-    <div id='signin'><h1>Sing In</h1>
-      <center> <Toaster />
-        <form onSubmit={handleSubmit}>
-          <br />
-          <TextField
-            label="Email"
-            type="email"
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
-            margin="normal"
-            required
-          />
-          <br />
-          <TextField
-            label="Password"
-            type="password"
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
-            margin="normal"
-            required
-          />
-          <br />
-          <Button type="submit" variant="contained" color="primary">
-            Register
-          </Button>
-          <Button type='' variant='contained' color='warning' onClick={()=>navigate(-1)}>Back</Button>
-        </form>
-      </center>
+return (<>
+  <div id='signin'><h1>Sing In</h1>
+    <center> <Toaster />
+      <form onSubmit={handleSubmit}>
+        <br />
+        <TextField
+          label="Email"
+          type="email"
+          value={email}
+          onChange={(event) => setEmail(event.target.value)}
+          margin="normal"
+          required
+        />
+        <br />
+        <TextField
+          label="Password"
+          type="password"
+          value={password}
+          onChange={(event) => setPassword(event.target.value)}
+          margin="normal"
+          required
+        />
+        <br />
+        <Button type="submit" variant="contained" color="primary">
+          Login
+        </Button>
+        <Button type='' variant='contained' color='warning' onClick={() => navigate(-1)}>Back</Button>
+      </form>
+    </center>
 
-    </div>
+  </div>
 
-  </>
-  )
+</>
+)
 };
 
 export default SignIn;

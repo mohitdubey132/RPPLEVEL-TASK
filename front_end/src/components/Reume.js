@@ -3,6 +3,7 @@ import Home from "./Home.js";
 import Work from "./Work.js";
 import TimeLine from "./TimeLine";
 import Contactus from "./Contactus";
+import Admin from "./Admin"
 function App() {
   return (<>
   <Header/>
@@ -10,7 +11,7 @@ function App() {
   <Work/>
   <TimeLine/>
   <Contactus/>
-  
+  <Admin /> 
   </>
   );
 }

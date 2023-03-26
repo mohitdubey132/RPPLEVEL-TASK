@@ -32,8 +32,9 @@ const RegistrationForm = () => {
     if (data.success === true) {
       sucessNotify();
       localStorage.setItem("userId", data.user._id);
-      localStorage.setItem("userName", data.user.Name)
-      navigate('/books');
+      localStorage.setItem("userName", data.user.Name);
+      
+      navigate('/');
     }
     // if (data.success === 'false') {
 
