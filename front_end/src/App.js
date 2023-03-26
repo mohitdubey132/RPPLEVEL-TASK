@@ -1,23 +1,20 @@
 import Reume from './components/Reume'
-import { Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import SignIn from './components/SignIn';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+import RegistrationForm from './components/RegistrationForm';
 function App() {
+ 
   return (<>
     <div id='AppHome'>
-      <nav>
-        <ul>
-          <li><Link to="/">Login</Link></li>
-          <li><Link to ="/register">Register </Link></li>
-          <li><Link to="/books">Resume</Link></li>
-          
-        
-        </ul>
-      </nav>
-
+     
       <Routes>
-        <Route path="/" element={<SignIn />} />
-        <Route path="/books" element={<Reume />} />
+        <Route path='/signIn' element={<SignIn />} />
+     
+        <Route path='/register' element={<RegistrationForm/>} />
+        <Route path="/" element={<Reume />} />
+        
       </Routes>
     </div>
   </>

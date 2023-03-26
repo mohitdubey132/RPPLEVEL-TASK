@@ -8,7 +8,6 @@ const Header = () => {
       <nav>
         <NavContent />
         <Toaster />
-        <button onClick={sucessNotify}>Email</button>
       </nav>
     </>
   )
@@ -29,7 +28,8 @@ const NavContent = ({ setMenuOpen }) => (
       <a onClick={() => setMenuOpen(false)} href="#contact">
         Contact
       </a>
-      <Link to="/">Login</Link>
+      <Link to="/signIn">Login</Link>
+      <Link to="/register">Signup</Link>
     </div>
     
     <a href="mailto:mohitdubey1322001@gmail.com" onFocus={sucessNotify}>
