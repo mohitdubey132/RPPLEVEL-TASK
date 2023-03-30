@@ -22,7 +22,7 @@ const Work = () => {
                         <div key={i.title} className='workItem'>
                             <img src={i.imgSrc} alt={i.title}></img>
                             <aside>
-                                <h2>{i.title}</h2>
+                                <h2>{i.title}</h2><a href={i.url}>view Demo</a>
                                 <h3>{i.description} </h3>
                                 <a href={i.url}>view Demo</a>
                             </aside>
